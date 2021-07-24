@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class IndicatorP : MonoBehaviour
-{
+public class IndicatorP : MonoBehaviour {
     public Transform target;
     public Transform showDistanceTo;
     public Text distanceLable;
-    public int margin = 50;
+    private float margin = 50.0f;
 
     public Color color {
-        set {
-            GetComponent<Image>().color = value;
-        }
         get {
             return GetComponent<Image>().color;
+        }
+        set {
+            GetComponent<Image>().color = value;
         }
     }
 
@@ -40,13 +39,13 @@ public class IndicatorP : MonoBehaviour
         }
 
         GetComponent<Image>().enabled = true;
-        
+
         var screenPoint = Camera.main.WorldToScreenPoint(target.position);
+
         if(screenPoint.z < 0.0f) {
             screenPoint.z = 0.0f;
             screenPoint = screenPoint.normalized;
-            screenPoint.y *= 10;
-            screenPoint.x *= -Mathf.Infinity;
+            screenPoint.x *= Mathf.Infinity;
         }
 
         screenPoint.x = Mathf.Clamp(screenPoint.x, margin, Screen.width - margin);
