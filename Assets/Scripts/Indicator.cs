@@ -116,5 +116,6 @@ public class Indicator : MonoBehaviour {
         var localPosition = new Vector2();
         RectTransformUtility.ScreenPointToLocalPointInRectangle(transform.parent.GetComponent<RectTransform>(), screenPoint, Camera.main, out localPosition);
         transform.localPosition = localPosition;
+        transform.localPosition = localPosition;
     }
 }

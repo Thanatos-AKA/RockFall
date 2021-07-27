@@ -203,6 +203,7 @@ GameObject:
   m_Component:
   - component: {fileID: 212712566}
   - component: {fileID: 212712567}
+  - component: {fileID: 212712568}
   m_Layer: 0
   m_Name: Space Station
   m_TagString: Untagged
@@ -218,7 +219,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212712565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 10, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 156242591}
@@ -237,6 +238,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12777652af3e425469a02aea7f468fac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &212712568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212712565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9609ff69151b864598f8e29d05ad1ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 10
+  destructionPrefab: {fileID: 0}
+  gameOverOnDestroy: 1
 --- !u!1 &309565096
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,7 +265,7 @@ GameObject:
   - component: {fileID: 309565098}
   - component: {fileID: 309565097}
   m_Layer: 0
-  m_Name: EventSystem
+  m_Name: Event System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -710,7 +726,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &963194225
 GameObject:
@@ -790,7 +806,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: -10}
+  m_LocalPosition: {x: 0, y: 5, z: -50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -843,6 +859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   steering: {fileID: 2144680488}
+  shotPrefab: {fileID: 1054422207555329564, guid: d5c5ac342ebb52646a19bf5493f820c0, type: 3}
   fireRate: 0.2
 --- !u!4 &1004106317
 Transform:
@@ -1059,6 +1076,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302725617}
   m_CullTransparentMesh: 1
+--- !u!1 &1325139474
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1325139475}
+  - component: {fileID: 1325139476}
+  m_Layer: 0
+  m_Name: Asteroid Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1325139475
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325139474}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1325139476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325139474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d06c09d0c1db3b8419569e9e966f7146, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 250
+  asteriodPrefab: {fileID: 5385555690146215145, guid: 746d631a9c17e674fa6440b5eaaf299f, type: 3}
+  spawnRate: 1
+  variance: 0.7
+  target: {fileID: 1942998397}
+  spawnAsteriod: 1
 --- !u!1001 &1424701897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1199,6 +1265,7 @@ GameObject:
   - component: {fileID: 1942998398}
   - component: {fileID: 1942998400}
   - component: {fileID: 1942998401}
+  - component: {fileID: 1942998402}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -1276,10 +1343,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec705cdfb1937745a88410aaa037f74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotPrefab: {fileID: 1054422207555329564, guid: d5c5ac342ebb52646a19bf5493f820c0, type: 3}
   firePoints:
   - {fileID: 611571644}
   - {fileID: 488685349}
+--- !u!114 &1942998402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942998396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3653362fe20de884a9a043672ee94dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2144680484
 GameObject:
   m_ObjectHideFlags: 0

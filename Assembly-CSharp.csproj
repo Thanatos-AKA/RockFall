@@ -58,23 +58,33 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\VirtualJoystick.cs" />
     <Compile Include="Assets\Scripts\Indicator.cs" />
-    <Compile Include="Assets\Scripts\ShipTarget.cs" />
+    <Compile Include="Assets\Scripts\Ship\ShipTarget.cs" />
+    <Compile Include="Assets\Scripts2\IndicatorP.cs" />
+    <Compile Include="Assets\Scripts\DamageTaking.cs" />
+    <Compile Include="Assets\Scripts\DamageOnCollide.cs" />
+    <Compile Include="Assets\Scripts\Asteriod\Asteriod.cs" />
     <Compile Include="Assets\Scripts2\ShipThrustP.cs" />
     <Compile Include="Assets\Scripts2\VirtualJoystickP.cs" />
-    <Compile Include="Assets\Scripts\ShipThrust.cs" />
+    <Compile Include="Assets\Scripts2\SpaceStationP.cs" />
+    <Compile Include="Assets\Scripts2\ShipWeaponsP.cs" />
+    <Compile Include="Assets\Scripts\Ship\ShipThrust.cs" />
     <Compile Include="Assets\Scripts2\SmoothFollowP.cs" />
+    <Compile Include="Assets\Scripts\Asteriod\AsteroidSpawner.cs" />
+    <Compile Include="Assets\Scripts2\ShipTargetP.cs" />
     <Compile Include="Assets\Scripts\SmoothFollow.cs" />
-    <Compile Include="Assets\Scripts\InputManager.cs" />
+    <Compile Include="Assets\Scripts2\IndicatorManagerP.cs" />
+    <Compile Include="Assets\Scripts\Managers\InputManager.cs" />
     <Compile Include="Assets\Scripts2\ShipSteeringP.cs" />
     <Compile Include="Assets\Scripts2\InputManagerP.cs" />
-    <Compile Include="Assets\Scripts\IndicatorManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\IndicatorManager.cs" />
     <Compile Include="Assets\Scripts2\SingletonP.cs" />
     <Compile Include="Assets\Scripts\SpaceStation.cs" />
     <Compile Include="Assets\Scripts\Singleton.cs" />
-    <Compile Include="Assets\Scripts\ShipSteering.cs" />
-    <Compile Include="Assets\Scripts\ShipWeapons.cs" />
-    <Compile Include="Assets\Scripts\Shot.cs" />
-    <Compile Include="Assets\Scripts2\IndicatorP.cs" />
+    <Compile Include="Assets\Scripts\Ship\ShipSteering.cs" />
+    <Compile Include="Assets\Scripts2\ShotP.cs" />
+    <Compile Include="Assets\Scripts\Ship\ShipWeapons.cs" />
+    <Compile Include="Assets\Scripts\Ship\Shot.cs" />
+    <Compile Include="Assets\Scripts\KeyBoard.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Audio\Sources.txt" />
