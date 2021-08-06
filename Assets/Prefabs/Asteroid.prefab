@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  destructionPrefab: {fileID: 0}
+  destructionPrefab: {fileID: 551728394463774198, guid: 9fd8d41b933d40443920e3c9aa9ac2b4, type: 3}
   gameOverOnDestroy: 0
 --- !u!1001 &5385555690603372916
 PrefabInstance:

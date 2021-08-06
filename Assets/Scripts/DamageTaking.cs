@@ -23,6 +23,10 @@ public class DamageTaking : MonoBehaviour
             if(destructionPrefab != null) {
                 Instantiate(destructionPrefab, transform.position, transform.rotation);
             }
+
+            if(gameOverOnDestroy == true) {
+                GameManager.instance.GameOver();
+            }
         }
     }
 }

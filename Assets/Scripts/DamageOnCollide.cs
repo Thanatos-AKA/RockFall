@@ -10,11 +10,13 @@ public class DamageOnCollide : MonoBehaviour
 
     private void HitObject(GameObject theObject) {
         var theirDamage = theObject.GetComponentInParent<DamageTaking>();
+
         if(theirDamage) {
             theirDamage.TakeDamage(damage);
         }
 
         var ourDamage = GetComponentInParent<DamageTaking>();
+
         if(ourDamage) {
             ourDamage.TakeDamage(damageToself);
         }
